@@ -4,10 +4,43 @@
   --main-title-color: #ffffff;
   --second-title-color: #303030;
   --accent-color: #ff6c00;
+  --typical-margin: 20px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid red;
 }
 
 .list {
@@ -66,6 +99,8 @@ body {
 
 .header {
   background-color: gray;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link,
@@ -105,10 +140,12 @@ body {
 
 .hero-content {
   background-color: #303030;
+  padding: 272px 96px 206px 96px;
 }
 
 .hero-top-text {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--typical-margin);
 }
 .hero-title {
   font-family: "Raleway", sans-serif;
@@ -116,28 +153,39 @@ body {
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--main-title-color);
+  margin-bottom: var(--typical-margin);
 }
 .hero-bottom-text {
   color: #9da4bd;
+  max-width: 400px;
 }
 
 /* -------------------------ABOUT-------------------------- */
 
+.about {
+  padding-top: 169px;
+  padding-bottom: 121px;
+}
+
 .about-top-text {
   color: #303030;
+  margin-bottom: var(--typical-margin);
 }
 .about-title {
   color: var(--second-title-color);
+  margin-bottom: var(--typical-margin);
 }
 
 .about-bottom-text {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
+  margin-bottom: var(--typical-margin);
   color: #555555;
 }
 .about-text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 40px;
 }
 
 .about-btn {
@@ -148,12 +196,21 @@ body {
 
 .prices {
   background-color: #303030;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 .prices-top-text {
   color: rgba(157, 164, 189, 0.6);
+  margin: var(--typical-margin);
 }
 .prices-title {
   color: var(--main-title-color);
+  margin-bottom: 44px;
+}
+
+.prices-list {
+  border: 1px dashed #ffffff;
+  padding: 30px 40px;
 }
 
 .prices-item-text {
@@ -163,11 +220,30 @@ body {
   color: #9da4bd;
 }
 
+.prices-item {
+  margin-bottom: var(--typical-margin);
+}
+
 .prices-btn {
   color: var(--main-btn-color);
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
 }
 
 /* -------------------------BENEFITS-------------------------- */
+
+.benefits {
+  padding-top: 143px;
+  padding-bottom: 137px;
+}
+
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  border: 1px solid #000000;
+  padding: 20px 24px;
+}
 
 .benefits-item-count {
   font-weight: 700;
@@ -176,6 +252,7 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+  display: block;
 }
 
 .benefits-item-text {
@@ -187,11 +264,13 @@ body {
 }
 
 .benefits-top-text {
+  margin-bottom: var(--typical-margin);
   color: #303030;
 }
 
 .benefits-title {
   color: var(--second-title-color);
+  margin-bottom: var(--typical-margin);
 }
 .benefits-bottom-text {
   color: #555555;
@@ -199,12 +278,19 @@ body {
 
 /* -------------------------MASTERS-------------------------- */
 
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 .masters-top-text {
   color: #303030;
+  margin-bottom: var(--typical-margin);
 }
 
 .masters-title {
   color: var(--second-title-color);
+  margin-bottom: 44px;
 }
 
 .masters-item-title {
@@ -214,6 +300,8 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #303030;
+  margin-bottom: 8px;
+  margin-top: 30px;
 }
 
 .masters-item-text {
