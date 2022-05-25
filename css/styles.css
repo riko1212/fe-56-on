@@ -81,12 +81,17 @@ body {
 }
 
 .btn {
+  min-width: 160px;
+  height: 40px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  background-color: transparent;
+  border-radius: 30px;
 }
 
 .bottom-text {
@@ -101,6 +106,24 @@ body {
   background-color: gray;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.header-logo {
+  margin-right: 70px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .header-link,
@@ -118,12 +141,20 @@ body {
 .header-tel:focus {
   color: var(--accent-color);
 }
+.header-connect {
+  margin-left: auto;
+}
 
 .header-btn {
-  color: var(--btn-color);
+  color: var(--main-btn-color);
+  margin-left: 40px;
 }
 
 /* --------------------------HERO-------------------------- */
+
+.hero .container {
+  display: flex;
+}
 
 .hero-link {
   font-weight: 600;
@@ -131,6 +162,10 @@ body {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+}
+
+.hero-list {
+  width: 90px;
 }
 
 .hero-link:hover,
@@ -141,6 +176,7 @@ body {
 .hero-content {
   background-color: #303030;
   padding: 272px 96px 206px 96px;
+  flex-grow: 1;
 }
 
 .hero-top-text {
@@ -165,6 +201,19 @@ body {
 .about {
   padding-top: 169px;
   padding-bottom: 121px;
+}
+
+.about .container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  margin-right: 64px;
+}
+
+.about-item + .about-item {
+  margin-left: 30px;
 }
 
 .about-top-text {
@@ -208,9 +257,14 @@ body {
   margin-bottom: 44px;
 }
 
+.prices-wrap {
+  display: flex;
+}
+
 .prices-list {
   border: 1px dashed #ffffff;
   padding: 30px 40px;
+  flex-grow: 1;
 }
 
 .prices-item-text {
@@ -222,6 +276,12 @@ body {
 
 .prices-item {
   margin-bottom: var(--typical-margin);
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 
 .prices-btn {
@@ -293,6 +353,20 @@ body {
   margin-bottom: 44px;
 }
 
+.masters-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+/* .masters-item:not(:last-child) {
+  margin-right: 30px;
+} */
+
+.masters-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+}
+
 .masters-item-title {
   font-weight: 400;
   font-size: 18px;
@@ -313,9 +387,25 @@ body {
 }
 
 /* -------------------------GALLERY-------------------------- */
+.gallery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
 
 .gallery-top-text {
   color: #303030;
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.gallery-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin: 15px;
 }
 
 /* -------------------------ONLINE-------------------------- */
