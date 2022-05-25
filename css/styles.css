@@ -305,6 +305,20 @@ body {
   padding: 20px 24px;
 }
 
+.benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+}
+
 .benefits-item-count {
   font-weight: 700;
   font-size: 42px;
@@ -404,7 +418,7 @@ body {
 }
 
 .gallery-item {
-  flex-basis: calc(100% / 4 - 30px);
+  flex-basis: calc(100% / 3 - 30px);
   margin: 15px;
 }
 
