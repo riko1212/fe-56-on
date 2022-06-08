@@ -18,12 +18,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <a class="header-logo" href="">
+        <a class="header-logo animate__animated animate__bounce" href="">
           <svg class="logo-icon" width="66" height="55">
             <use href="./img/symbol-defs.svg#icon-logo"></use>
           </svg>
@@ -31,7 +36,7 @@
         <nav class="header-nav">
           <ul class="header-list list">
             <li class="header-item">
-              <a href="https://www.google.com/" class="header-link link"
+              <a href="https://www.google.com/" class="current header-link link"
                 >О нас</a
               >
             </li>
@@ -52,35 +57,40 @@
           <a class="header-tel link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="header-btn btn">онлайн-запись</button>
+          <button type="button" class="header-btn btn" data-modal-open>
+            онлайн-запись
+          </button>
         </div>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                href="https://www.google.com/"
-                class="hero-link link"
-                target="_blank"
-                rel="noopener nofollow noreferrer"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                href=""
-                class="hero-link link"
-                target="_blank"
-                rel="noopener nofollow noreferrer"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  href="https://www.google.com/"
+                  class="hero-link link"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  href=""
+                  class="hero-link link"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+
           <div class="hero-content">
-            <p lang="en" class="hero-top-text top-text">
+            <p lang="en" class="hero-top-text top-text" data-aos="fade-up">
               A hair salon for men in Kyiv
             </p>
             <h1 lang="en" class="hero-title">BarberShop</h1>
@@ -113,7 +123,9 @@
             </li>
           </ul>
           <div class="about-content">
-            <p class="about-top-text top-text">О нас</p>
+            <p class="about-top-text top-text" data-aos="fade-down-left">
+              О нас
+            </p>
             <h2 class="about-title title">Лучший Барбершоп твоего города</h2>
             <p class="about-bottom-text bottom-text">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
@@ -135,7 +147,9 @@
           <p class="prices-top-text top-text">
             Проведи время в компании лучших мастеров
           </p>
-          <h2 class="prices-title title">Услуги и цены</h2>
+          <h2 class="prices-title title" data-aos="flip-right">
+            Услуги и цены
+          </h2>
           <div class="prices-wrap">
             <ul class="prices-list prices-list-light list">
               <li class="prices-item">
@@ -198,7 +212,9 @@
             </li>
           </ul>
           <p class="benefits-top-text top-text">Cтарая традиционная школа</p>
-          <h2 class="benefits-title title">Почему приходят именно к нам?</h2>
+          <h2 class="benefits-title title" data-aos="zoom-in-up">
+            Почему приходят именно к нам?
+          </h2>
           <p class="benefits-bottom-text bottom-text">
             О нас говорят только хорошее. Но лучше 1 раз увидеть и
             прочувствовать, чем 10 раз прочитать.
@@ -213,22 +229,26 @@
           <h2 class="masters-title title">Наши мастера</h2>
           <ul class="masters-list list">
             <li class="masters-item">
-              <img
-                src="./img/masters-img-1.jpeg"
-                alt="Барбер стрежет клиента"
-                width="370"
-                height="346"
-              />
+              <div class="masters-top-wrap">
+                <img
+                  src="./img/masters-img-1.jpeg"
+                  alt="Барбер стрежет клиента"
+                  width="370"
+                  height="346"
+                />
+                <p class="masters-top-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem,
+                  eveniet suscipit tempore iste reprehenderit nobis eius
+                  repellendus ab quidem veniam esse, vero dolorem exercitationem
+                  tempora inventore, quisquam minus cum mollitia.
+                </p>
+              </div>
+
               <h3 lang="en" class="masters-item-title">John Smith</h3>
               <p lang="en" class="masters-item-text">Extreme Barber</p>
               <ul class="masters-soc-list list">
                 <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="masters-soc-icon" width="20" height="20">
-                      <use
-                        href="./img/symbol-defs.svg#icon-instagram"
-                      ></use></svg
-                  ></a>
+                  <a href="" class="masters-soc-link link"> </a>
                 </li>
                 <li class="masters-soc-item">
                   <a href="" class="masters-soc-link link"
@@ -413,5 +433,19 @@
         </li>
       </ul>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="masters-soc-icon" width="18" height="18">
+            <use href="./img/symbol-defs.svg#icon-close-black-18dp-2-1-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
