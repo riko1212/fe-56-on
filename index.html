@@ -433,13 +433,84 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="masters-soc-icon" width="18" height="18">
             <use href="./img/symbol-defs.svg#icon-close-black-18dp-2-1-1"></use>
           </svg>
         </button>
+        <p class="modal-title">Заголовок модального вікна</p>
+
+        <form>
+          <label class="modal-label">
+            Ваше імя
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              placeholder="Микола"
+              required
+              minlength="2"
+            />
+          </label>
+          <div class="modal-field">
+            <label for="user-tel" class="modal-label">Ваш телефон</label>
+            <input
+              type="tel"
+              class="modal-input"
+              name="user-tel"
+              placeholder="+380 (96) 111-11-11"
+              required
+              title="+380 (96) 111-11-11"
+              id="user-tel"
+            />
+          </div>
+          <input
+            type="email"
+            class="modal-input"
+            name="user-email"
+            placeholder="Ваша пошта"
+          />
+          <div class="modal-field">
+            <label for="user-text" class="modal-label">Ваш комент</label>
+            <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-text"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
+          <fieldset>
+            <legend>size</legend>
+            <label for="big">big</label>
+            <input type="radio" id="big" name="size" value="big" />
+            <label for="small">small</label>
+            <input type="radio" id="small" name="size" value="small" />
+          </fieldset>
+
+          <fieldset>
+            <legend>add</legend>
+            <label for="tomato">tomato</label>
+            <input type="checkbox" id="tomato" name="add" value="tomato" />
+            <label for="cheese">cheese</label>
+            <input type="checkbox" id="cheese" name="add" value="cheese" />
+            <label for="pepperoni">pepperoni</label>
+            <input
+              type="checkbox"
+              id="pepperoni"
+              name="add"
+              value="pepperoni"
+            />
+          </fieldset>
+          <label for="user-city" class="modal-label">Ваше місто</label>
+          <select name="user-city" id="user-city" class="modal-input">
+            <option value="Paris" class="opt">Paris</option>
+            <option value="London">London</option>
+            <option value="Noviy Rozdil">Noviy Rozdil</option>
+          </select>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
