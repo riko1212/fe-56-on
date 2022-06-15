@@ -623,9 +623,100 @@ body {
   padding-top: 130px;
   padding-bottom: 130px;
   width: calc(50% + 15px);
+  padding-right: 40px;
 }
 .online-title {
   color: var(--main-title-color);
+  margin-bottom: 44px;
+}
+
+.online-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  position: relative;
+  width: 265px;
+}
+
+.online-input {
+  width: 100%;
+  height: 24px;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  background-color: transparent;
+  outline: none;
+  transition: border-color 300ms linear;
+  color: rgba(190, 193, 202, 0.8);
+}
+
+.online-input:focus {
+  border-color: #ffffff;
+}
+
+.online-input:focus + .online-label,
+.online-input:not(:placeholder-shown) + .online-label {
+  color: #ffffff;
+  transform: translateY(-100%);
+}
+
+.online-mess:focus + .online-label,
+.online-mess:not(:placeholder-shown) + .online-label {
+  color: #ffffff;
+  transform: translateY(-100%);
+}
+
+.online-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  transition: color 300ms linear, transform 300ms linear;
+}
+
+.text-field {
+  width: 100%;
+  position: relative;
+  margin-top: 44px;
+}
+
+.online-mess {
+  width: 100%;
+  height: 76px;
+  border: none;
+  resize: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  background-color: transparent;
+  outline: none;
+  transition: border-color 300ms linear;
+  color: rgba(190, 193, 202, 0.8);
+  margin-bottom: 44px;
+}
+
+.online-btn {
+  color: var(--main-btn-color);
+}
+
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ff6c00;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 10px;
 }
 
 /* -------------------------contacts-------------------------- */
@@ -755,15 +846,38 @@ body {
   margin-bottom: 15px;
 }
 
+.modal-field {
+  margin-bottom: 10px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .modal-input {
   width: 100%;
   height: 45px;
   border: 1px solid #999999;
   border-radius: 5px;
-  margin-bottom: 10px;
-  padding-left: 10px;
+
+  padding-left: 30px;
   color: teal;
   outline: none;
+}
+
+.modal-input:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-color);
 }
 
 .modal-input:not(:placeholder-shown):not(:focus):valid {
@@ -786,6 +900,8 @@ body {
 .modal-label {
   font-size: 12px;
   color: #9da4bd;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .modal-text {
@@ -794,4 +910,128 @@ body {
   border: 1px solid #999999;
   border-radius: 5px;
   resize: none;
+}
+
+.check-text {
+  color: #555555;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* ------------------Перекключатель---------------------------- */
+
+/* .check-text::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999999;
+  border-radius: 50px;
+  margin-right: 5px;
+  transition: background-color 300ms linear;
+}
+
+.modal-check:checked + .check-text::before {
+  background-color: #c4eecd;
+}
+
+.check-text::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  width: 8px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #b5b7bf;
+  left: 11px;
+  transform: rotate(-45deg);
+  transition: transform 300ms linear, background-color 300ms linear;
+}
+
+.modal-check:checked + .check-text::after {
+  transform: rotate(45deg);
+  background-color: #ffffff;
+  border: 1px solid #999999;
+} */
+
+/* ---------------------Повзунок----------------------------- */
+
+/* .check-text::before {
+  content: "";
+  width: 40px;
+  height: 10px;
+  border: 1px solid #999999;
+  border-radius: 50px;
+  margin-right: 5px;
+  transition: background-color 300ms linear;
+}
+
+.check-text::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #b5b7bf;
+  left: 3px;
+  transition: transform 300ms linear, background-color 300ms linear;
+}
+
+.modal-check:checked + .check-text::after {
+  transform: translate(16px);
+  background-color: #ffffff;
+  border: 1px solid #999999;
+}
+
+.modal-check:checked + .check-text::before {
+  background-color: #c4eecd;
+} */
+
+/* -----------------Через спрайт----------------------- */
+
+/* .check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #090b13;
+  border-radius: 3px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon {
+  fill: transparent;
+}
+
+.modal-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border: none;
+}
+.modal-check:checked + .check-text .check-icon {
+  fill: #ffffff;
+} */
+
+/* --------------Через Бефор-------------------------- */
+
+.check-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #090b13;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.modal-check:checked + .check-text::before {
+  background-color: var(--accent-color);
+  background-image: url(../img/check.svg);
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-check:focus + .check-text::before {
+  border-color: var(--accent-color);
 }

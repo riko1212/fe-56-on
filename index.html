@@ -378,6 +378,40 @@
         <div class="container">
           <section class="online">
             <h2 class="online-title title">Онлайн-запись</h2>
+            <form class="online-form">
+              <div class="input-field">
+                <input
+                  type="text"
+                  class="online-input"
+                  name="online-name"
+                  id="online-name"
+                  placeholder=" "
+                />
+                <label for="online-name" class="online-label">Имя*</label>
+              </div>
+              <div class="input-field">
+                <input
+                  type="tel"
+                  class="online-input"
+                  name="online-tel"
+                  id="online-tel"
+                  placeholder=" "
+                />
+                <label for="online-tel" class="online-label">Телефон*</label>
+              </div>
+              <div class="text-field">
+                <textarea
+                  name="online-mess"
+                  id="online-mess"
+                  class="online-mess"
+                  placeholder=" "
+                ></textarea>
+                <label for="online-mess" class="online-label">Сообщение</label>
+              </div>
+              <button type="submit" class="online-btn btn" data-modal-open>
+                отправить
+              </button>
+            </form>
           </section>
           <section class="contacts">
             <h2 class="contacts-title title">Контакты</h2>
@@ -433,7 +467,7 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="masters-soc-icon" width="18" height="18">
@@ -443,8 +477,8 @@
         <p class="modal-title">Заголовок модального вікна</p>
 
         <form>
-          <label class="modal-label">
-            Ваше імя
+          <div class="modal-field">
+            <label class="modal-label"> Ваше імя</label>
             <input
               type="text"
               class="modal-input"
@@ -453,7 +487,7 @@
               required
               minlength="2"
             />
-          </label>
+          </div>
           <div class="modal-field">
             <label for="user-tel" class="modal-label">Ваш телефон</label>
             <input
@@ -466,12 +500,21 @@
               id="user-tel"
             />
           </div>
-          <input
-            type="email"
-            class="modal-input"
-            name="user-email"
-            placeholder="Ваша пошта"
-          />
+          <div class="modal-field">
+            <label for="user-email" class="modal-label">Ваша пошта</label>
+            <div class="input-wrap">
+              <input
+                type="email"
+                class="modal-input"
+                name="user-email"
+                placeholder="Ваша пошта"
+                id="user-email"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./img/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
           <div class="modal-field">
             <label for="user-text" class="modal-label">Ваш комент</label>
             <textarea
@@ -481,7 +524,25 @@
               placeholder="Введіть текст"
             ></textarea>
           </div>
-          <fieldset>
+
+          <div class="modal-field">
+            <input
+              type="checkbox"
+              name="privacy"
+              value="true"
+              class="modal-check visually-hidden"
+              id="privacy"
+            />
+            <label for="privacy" class="check-text">
+              <!-- <span>
+                <svg class="check-icon" width="11" height="8">
+                  <use href="./img/symbol-defs.svg#icon-check"></use>
+                </svg>
+              </span> -->
+              Політика користування</label
+            >
+          </div>
+          <!-- <fieldset>
             <legend>size</legend>
             <label for="big">big</label>
             <input type="radio" id="big" name="size" value="big" />
@@ -508,7 +569,7 @@
             <option value="Paris" class="opt">Paris</option>
             <option value="London">London</option>
             <option value="Noviy Rozdil">Noviy Rozdil</option>
-          </select>
+          </select> -->
           <button type="submit">Send</button>
         </form>
       </div>
