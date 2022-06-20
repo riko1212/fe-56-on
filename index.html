@@ -24,40 +24,41 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <a class="header-logo animate__animated animate__bounce" href="">
-          <svg class="logo-icon" width="66" height="55">
+        <a class="logo header__logo animate__animated animate__bounce" href="">
+          <svg class="logo__icon" width="66" height="55">
             <use href="./img/symbol-defs.svg#icon-logo"></use>
           </svg>
         </a>
-        <nav class="header-nav">
-          <ul class="header-list list">
-            <li class="header-item">
-              <a href="https://www.google.com/" class="current header-link link"
+        <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a href="https://www.google.com/" class="current nav__link link"
                 >О нас</a
               >
             </li>
-            <li class="header-item">
-              <a href="" class="header-link link">Услуги и цены</a>
+            <li class="nav__item">
+              <a href="" class="nav__link link">Услуги и цены</a>
             </li>
-            <li class="header-item">
-              <a href="#masters" class="header-link link">Мастера</a>
+            <li class="nav__item">
+              <a href="#masters" class="nav__link link">Мастера</a>
             </li>
-            <li class="header-item">
-              <a href="https://www.google.com/" class="header-link link"
+            <li class="nav__item">
+              <a href="https://www.google.com/" class="nav__link link"
                 >Контакты</a
               >
             </li>
           </ul>
         </nav>
-        <div class="header-connect">
-          <a class="header-tel link" href="tel:+380441111111"
+        <div class="connect">
+          <a class="connect__tel link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="header-btn btn" data-modal-open>
+          <button type="button" class="connect__btn btn" data-modal-open>
             онлайн-запись
           </button>
         </div>
@@ -66,21 +67,21 @@
     <main>
       <section class="hero">
         <div class="container">
-          <div class="hero-soc">
-            <ul class="hero-list list">
-              <li class="hero-item">
+          <div class="soc">
+            <ul class="soc__list list">
+              <li class="soc__item">
                 <a
                   href="https://www.google.com/"
-                  class="hero-link link"
+                  class="soc__link link"
                   target="_blank"
                   rel="noopener nofollow noreferrer"
                   >Instagram</a
                 >
               </li>
-              <li class="hero-item">
+              <li class="soc__item">
                 <a
                   href=""
-                  class="hero-link link"
+                  class="soc__link link"
                   target="_blank"
                   rel="noopener nofollow noreferrer"
                   >Youtube</a
@@ -90,11 +91,17 @@
           </div>
 
           <div class="hero-content">
-            <p lang="en" class="hero-top-text top-text" data-aos="fade-up">
+            <p
+              lang="en"
+              class="hero-content__top-text top-text top-text--light"
+              data-aos="fade-up"
+            >
               A hair salon for men in Kyiv
             </p>
-            <h1 lang="en" class="hero-title">BarberShop</h1>
-            <p class="hero-bottom-text bottom-text">
+            <h1 lang="en" class="hero-content__title title--light">
+              BarberShop
+            </h1>
+            <p class="hero-content__bottom-text bottom-text">
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
               и со вкусом.
             </p>
@@ -104,8 +111,8 @@
 
       <section class="about">
         <div class="container">
-          <ul class="about-list list">
-            <li class="about-item">
+          <ul class="pic-list list">
+            <li class="pic-list__item">
               <img
                 src="./img/about-img-1.jpeg"
                 alt="барбер бреет шею"
@@ -113,7 +120,7 @@
                 height="445"
               />
             </li>
-            <li class="about-item">
+            <li class="pic-list__item">
               <img
                 src="./img/about-img-2.jpeg"
                 alt="барбер делает кантик"
@@ -123,22 +130,29 @@
             </li>
           </ul>
           <div class="about-content">
-            <p class="about-top-text top-text" data-aos="fade-down-left">
+            <p
+              class="about-content__top-text top-text top-text--dark"
+              data-aos="fade-down-left"
+            >
               О нас
             </p>
-            <h2 class="about-title title">Лучший Барбершоп твоего города</h2>
-            <p class="about-bottom-text bottom-text">
+            <h2 class="about-content__title title title--dark">
+              Лучший Барбершоп твоего города
+            </h2>
+            <p class="about-content__bottom-text bottom-text">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </p>
-            <p class="about-text">
+            <p class="about-content__text">
               Мы команда, которая никогда не останавливается на достигнутом и
               жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
               никогда не сможешь быть прежним. Мы команда, которая всегда с
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button type="button" class="about-btn btn">онлайн-запись</button>
+            <button type="button" class="about-content__btn btn">
+              онлайн-запись
+            </button>
           </div>
         </div>
       </section>
@@ -223,20 +237,20 @@
       </section>
       <section id="masters" class="masters">
         <div class="container">
-          <p class="masters-top-text top-text">
+          <p class="masters__top-text top-text top-text--dark">
             для настоящих ценителей атмосферы
           </p>
-          <h2 class="masters-title title">Наши мастера</h2>
-          <ul class="masters-list list">
-            <li class="masters-item">
-              <div class="masters-top-wrap">
+          <h2 class="masters__title title title--dark">Наши мастера</h2>
+          <ul class="card-list list">
+            <li class="card-list__item">
+              <div class="card-list__top-wrap">
                 <img
                   src="./img/masters-img-1.jpeg"
                   alt="Барбер стрежет клиента"
                   width="370"
                   height="346"
                 />
-                <p class="masters-top-text">
+                <p class="card-list__top-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem,
                   eveniet suscipit tempore iste reprehenderit nobis eius
                   repellendus ab quidem veniam esse, vero dolorem exercitationem
@@ -244,31 +258,31 @@
                 </p>
               </div>
 
-              <h3 lang="en" class="masters-item-title">John Smith</h3>
-              <p lang="en" class="masters-item-text">Extreme Barber</p>
-              <ul class="masters-soc-list list">
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"> </a>
+              <h3 lang="en" class="card-list__item-title">John Smith</h3>
+              <p lang="en" class="card-list__item-text">Extreme Barber</p>
+              <ul class="card-list__soc-list list socials">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"> </a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="masters-soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use
                         href="./img/symbol-defs.svg#icon-instagram"
                       ></use></svg
                   ></a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link">
-                    <svg class="masters-soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link">
+                    <svg class="socials__icon" width="20" height="20">
                       <use
                         href="./img/symbol-defs.svg#icon-instagram"
                       ></use></svg
                   ></a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="masters-soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use
                         href="./img/symbol-defs.svg#icon-instagram"
                       ></use></svg
@@ -276,25 +290,25 @@
                 </li>
               </ul>
             </li>
-            <li class="masters-item">
+            <li class="card-list__item">
               <img
                 src="./img/masters-img-2.jpeg"
                 alt="Барбер стрежет клиента"
                 width="370"
                 height="346"
               />
-              <h3 lang="en" class="masters-item-title">Michele Doe</h3>
-              <p lang="en" class="masters-item-text">Extreme Barber</p>
+              <h3 lang="en" class="card-list__item-title">Michele Doe</h3>
+              <p lang="en" class="card-list__item-text">Extreme Barber</p>
             </li>
-            <li class="masters-item">
+            <li class="card-list__item">
               <img
                 src="./img/masters-img-3.jpeg"
                 alt="Барбер стрежет клиента"
                 width="370"
                 height="346"
               />
-              <h3 lang="en" class="masters-item-title">Alan Black</h3>
-              <p lang="en" class="masters-item-text">Extreme Barber</p>
+              <h3 lang="en" class="card-list__item-title">Alan Black</h3>
+              <p lang="en" class="card-list__item-text">Extreme Barber</p>
             </li>
           </ul>
         </div>
