@@ -1,0 +1,6 @@
+.bottom-text {
+  @include font(18px, null, 1.67, 0.02em);
+  // font-size: 18px;
+  // line-height: 1.67;
+  // letter-spacing: 0.02em;
+}

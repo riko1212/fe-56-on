@@ -1,10 +1,9 @@
 .about {
   padding-top: 169px;
   padding-bottom: 121px;
-}
-
-.about .container {
-  display: flex;
+  .container {
+    display: flex;
+  }
 }
 
 .pic-list {
@@ -15,6 +14,12 @@
 .pic-list__item + .pic-list__item {
   margin-left: 30px;
 }
+
+// .pic-list__item {
+//   & + & {
+//     margin-left: 30px;
+//   }
+// }
 
 .about-content__top-text {
   margin-bottom: var(--typical-margin);

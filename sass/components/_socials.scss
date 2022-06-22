@@ -1,0 +1,38 @@
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
+.socials__item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__link {
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  border-radius: 50%;
+  @extend %align-list;
+  justify-content: center;
+  fill: #ffffff;
+  &:hover,
+  &:focus {
+    background-color: teal;
+    fill: chocolate;
+  }
+}
+
+/* .socials__link:hover,
+.socials__link:focus {
+  background-color: teal;
+}
+
+.socials__link:hover .socials__icon,
+.socials__link:focus .masters-soc-icon {
+  fill: chocolate;
+} */
