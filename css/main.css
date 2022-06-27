@@ -30,6 +30,9 @@ button {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 body {
@@ -63,18 +66,38 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 448px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .top-text {
   font-size: 11px;
   font-weight: 600;
-  line-height: 1.36;
+  line-height: 1.91;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .top-text {
+    line-height: 1.36;
+  }
 }
 .top-text--light {
   color: rgba(157, 164, 189, 0.6);
@@ -88,6 +111,7 @@ body {
   height: 1px;
   background-color: currentColor;
   margin-right: 21px;
+  flex-shrink: 0;
 }
 
 .title {
@@ -704,8 +728,20 @@ body {
 }
 
 .masters {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+@media screen and (min-width: 768px) {
+  .masters {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .masters {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 
 .masters__top-text {
@@ -719,15 +755,25 @@ body {
 
 .card-list {
   display: flex;
-  margin-left: -30px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 /* .masters-item:not(:last-child) {
   margin-right: 30px;
 } */
 .card-list__item {
-  flex-basis: calc(33.3333333333% - 30px);
-  margin-left: 30px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .card-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-list__item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .card-list__top-wrap {
@@ -771,8 +817,20 @@ body {
 }
 
 .gallery {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 
 .gallery-top-text {
@@ -783,12 +841,21 @@ body {
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
+  gap: 30px;
 }
 
 .gallery-item {
-  flex-basis: calc(25% - 30px);
-  margin: 15px;
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .gallery-item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .contact-wrap {

@@ -1,6 +1,14 @@
 .masters {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 
 .masters__top-text {
@@ -14,7 +22,8 @@
 
 .card-list {
   display: flex;
-  margin-left: -30px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 /* .masters-item:not(:last-child) {
@@ -22,8 +31,13 @@
 } */
 
 .card-list__item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .card-list__top-wrap {
